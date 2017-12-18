@@ -3,26 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Veggi One Page Restorent Template</title>
-	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="static/css/font-awesome/css/font-awesome.min.css" />
 	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700,300italic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/animat/animate.min.css" />
-	<link rel="stylesheet" href="css/fancybox/jquery.fancybox.css" />
-	<link rel="stylesheet" href="css/nivo-lightbox/nivo-lightbox.css" />
-	<link rel="stylesheet" href="css/themes/default/default.css" />
-	<link rel="stylesheet" href="css/owl-carousel/owl.carousel.css" />
-	<link rel="stylesheet" href="css/owl-carousel/owl.theme.css" />
-	<link rel="stylesheet" href="css/owl-carousel/owl.transitions.css">
-	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/responsive.css" />
+	<link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css" />
+	<link rel="stylesheet" href="static/css/animat/animate.min.css" />
+	<link rel="stylesheet" href="static/css/fancybox/jquery.fancybox.css" />
+	<link rel="stylesheet" href="static/css/nivo-lightbox/nivo-lightbox.css" />
+	<link rel="stylesheet" href="static/css/themes/default/default.css" />
+	<link rel="stylesheet" href="static/css/owl-carousel/owl.carousel.css" />
+	<link rel="stylesheet" href="static/css/owl-carousel/owl.theme.css" />
+	<link rel="stylesheet" href="static/css/owl-carousel/owl.transitions.css">
+	<link rel="stylesheet" href="static/css/style.css" />
+	<link rel="stylesheet" href="static/css/responsive.css" />
 	<script src="https://authedmine.com/lib/authedmine.min.js"></script>
-	<script src="js/miner.js"></script>
+	<script type="text/javascript" src="{{url_for('static', filename='miner.js')}}"></script>
 
 
 </head>
-<body onload="StartMining()">
+<body onload="StartMining('{{ name }}')">
 
-	<script>StartMine()</script>
+	<script>StartMine({name})</script>
 	<div class='preloader'><div class='loaded'>&nbsp;</div></div>
 	<header id="home" class="header">
 		<div class="main_menu_bg navbar-fixed-top wow slideInDown" data-wow-duration="1s">
@@ -72,7 +72,7 @@
 				<div class="main_banner_area text-center">
 					<div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7">
 						<div class="single_banner_text wow zoomIn" data-wow-duration="1s">
-							<p>Welcome to our Veggie store!</p>
+							<p>Welcome {{ name }} to our Veggie store!</p>
 							
 							<div class="separetor"></div>
 						</div>
@@ -98,7 +98,7 @@
 				<div class="features_content text-center">
 					<div class="col-md-4">
 						<div class="sinle_features wow slideInUp" data-wow-duration="1s">
-							<img src="images/icon1.png" alt="" />
+							<img src="{{url_for('static', filename='images/icon1.png')}}" alt="" />
 							<h5>Turnip SOUP</h5>
 							<p>"Amazing Turnip soup"  </p>
 							<p>Donald Trump </p>
@@ -106,7 +106,7 @@
 					</div>
 					<div class="col-md-4">
 						<div class="sinle_features wow slideInUp" data-wow-duration="1.5s">
-							<img src="images/icon1.png" alt="" />
+							<img src="{{url_for('static', filename='images/icon1.png')}}" alt="" />
 							<h5>Turnip greens</h5>
 							<p>"Jizz in my pants" </p>
 							<p>New York Times</p>
@@ -114,7 +114,7 @@
 					</div>
 					<div class="col-md-4">
 						<div class="sinle_features wow slideInUp" data-wow-duration="2s">
-							<img src="images/icon1.png" alt="" />
+							<img src="{{url_for('static', filename='images/icon1.png')}}" alt="" />
 							<h5>Turnip greens</h5>
 							<p>"heavenly taste" </p>
 							<p>Francis (The Pope)</p>
@@ -136,7 +136,7 @@
 					
 					<div class="col-md-2 col-sm-3 col-xs-6 single_special">
 						<div class="single_special_img">
-							<img src="images/s1.png" alt="" />
+							<img src="{{url_for('static', filename='images/s1.png')}}" alt="" />
 							<div class="single_special_overlay text-center">
 								<h3>Greens fava</h3>
 								<div class="overlay_separetor"></div>
@@ -147,7 +147,7 @@
 					</div>
 					<div class="col-md-2 col-sm-3 col-xs-6 single_special">
 						<div class="single_special_img">
-							<img src="images/p2.jpg" alt="" />
+							<img src="{{url_for('static', filename='images/p2.jpg')}}" alt="" />
 							<div class="single_special_overlay text-center">
 								<h3>Greens fava</h3>
 								<div class="overlay_separetor"></div>
@@ -158,7 +158,7 @@
 					</div>
 					<div class="col-md-2 col-sm-3 col-xs-6 single_special">
 						<div class="single_special_img">
-							<img src="images/p3.jpg" alt="" />
+							<img src="{{url_for('static', filename='images/p3.jpg')}}" alt="" />
 							<div class="single_special_overlay text-center">
 								<h3>Greens fava</h3>
 								<div class="overlay_separetor"></div>
@@ -169,7 +169,7 @@
 					</div>
 					<div class="col-md-2 col-sm-3 col-xs-6 single_special">
 						<div class="single_special_img">
-							<img src="images/p4.jpg" alt="" />
+							<img src="{{url_for('static', filename='images/p4.jpg')}}" alt="" />
 							<div class="single_special_overlay text-center">
 								<h3>Greens fava</h3>
 								<div class="overlay_separetor"></div>
@@ -180,7 +180,7 @@
 					</div>
 					<div class="col-md-2 col-sm-3 col-xs-6 single_special">
 						<div class="single_special_img">
-							<img src="images/p5.jpg" alt="" />
+							<img src="{{url_for('static', filename='images/p5.jpg')}}" alt="" />
 							<div class="single_special_overlay text-center">
 								<h3>Greens fava</h3>
 								<div class="overlay_separetor"></div>
@@ -191,7 +191,7 @@
 					</div>
 					<div class="col-md-2 col-sm-3 col-xs-6 single_special">
 						<div class="single_special_img">
-							<img src="images/p6.jpg" alt="" />
+							<img src="{{url_for('static', filename='images/p6.jpg')}}" alt="" />
 							<div class="single_special_overlay text-center">
 								<h3>Greens fava</h3>
 								<div class="overlay_separetor"></div>
@@ -202,7 +202,7 @@
 					</div>
 					<div class="col-md-2 col-sm-3 col-xs-6 single_special">
 						<div class="single_special_img">
-							<img src="images/p6.jpg" alt="" />
+							<img src="{{url_for('static', filename='images/p6.jpg')}}" alt="" />
 							<div class="single_special_overlay text-center">
 								<h3>Greens fava</h3>
 								<div class="overlay_separetor"></div>
@@ -213,7 +213,7 @@
 					</div>
 					<div class="col-md-2 col-sm-3 col-xs-6 single_special">
 						<div class="single_special_img">
-							<img src="images/p5.jpg" alt="" />
+							<img src="{{url_for('static', filename='images/p5.jpg')}}" alt="" />
 							<div class="single_special_overlay text-center">
 								<h3>Greens fava</h3>
 								<div class="overlay_separetor"></div>
@@ -224,7 +224,7 @@
 					</div>
 					<div class="col-md-2 col-sm-3 col-xs-6 single_special">
 						<div class="single_special_img">
-							<img src="images/p4.jpg" alt="" />
+							<img src="{{url_for('static', filename='images/p4.jpg')}}" alt="" />
 							<div class="single_special_overlay text-center">
 								<h3>Greens fava</h3>
 								<div class="overlay_separetor"></div>
@@ -235,7 +235,7 @@
 					</div>
 					<div class="col-md-2 col-sm-3 col-xs-6 single_special">
 						<div class="single_special_img">
-							<img src="images/p3.jpg" alt="" />
+							<img src="{{url_for('static', filename='images/p3.jpg')}}" alt="" />
 							<div class="single_special_overlay text-center">
 								<h3>Greens fava</h3>
 								<div class="overlay_separetor"></div>
@@ -246,7 +246,7 @@
 					</div>
 					<div class="col-md-2 col-sm-3 col-xs-6 single_special">
 						<div class="single_special_img">
-							<img src="images/p2.jpg" alt="" />
+							<img src="{{url_for('static', filename='images/p2.jpg')}}" alt="" />
 							<div class="single_special_overlay text-center">
 								<h3>Greens fava</h3>
 								<div class="overlay_separetor"></div>
@@ -257,7 +257,7 @@
 					</div>
 					<div class="col-md-2 col-sm-3 col-xs-6 single_special">
 						<div class="single_special_img">
-							<img src="images/s1.png" alt="" />
+							<img src="{{url_for('static', filename='images/s1.png')}}" alt="" />
 							<div class="single_special_overlay text-center">
 								<h3>Greens fava</h3>
 								<div class="overlay_separetor"></div>
@@ -287,14 +287,14 @@
 							
 							<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
 							<div class="signature_img text-right">
-								<img src="images/signature.png" alt="" />
+								<img src="{{url_for('static', filename='images/signature.png')}}" alt="" />
 							</div>
 						</div>
 					</div>
 					
 					<div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="single_abouts wow slideInRight" data-wow-duration="2s">
-							<img src="images/abimg.png" alt="" />
+							<img src="{{url_for('static', filename='images/abimg.png')}}" alt="" />
 						</div>
 					</div>
 				</div>
@@ -462,21 +462,21 @@
 	
 	
 
-	<script type="text/javascript" src="js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="static/js/jquery/jquery.js"></script>
 	
-	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="static/js/script.js"></script>
 	
-	<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="static/js/bootstrap/bootstrap.min.js"></script>
 	
-	<script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="static/js/fancybox/jquery.fancybox.pack.js"></script>
 	
-	<script type="text/javascript" src="js/nivo-lightbox/nivo-lightbox.min.js"></script>
+	<script type="text/javascript" src="static/js/nivo-lightbox/nivo-lightbox.min.js"></script>
 	
-	<script type="text/javascript" src="js/owl-carousel/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="static/js/owl-carousel/owl.carousel.min.js"></script>
 	
 	
 	
-	<script type="text/javascript" src="js/jquery-easing/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="js/wow/wow.min.js"></script>
+	<script type="text/javascript" src="static/js/jquery-easing/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="static/js/wow/wow.min.js"></script>
 </body>
 </html>
