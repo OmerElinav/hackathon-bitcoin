@@ -1,7 +1,7 @@
 import os
 
 
-def locate(pattern, root=os.curdir):
+def locate(root=os.curdir):
     html_files = []
     for path, dirs, files in os.walk(os.path.abspath(root)):
         for f in files:

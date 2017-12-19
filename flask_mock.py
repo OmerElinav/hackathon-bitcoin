@@ -29,8 +29,11 @@ def requires_auth(f):
 @app.route('/')
 @requires_auth
 def hello_world():
-    balance = float(user_stats(request.authorization["username"]))/100000
-
+    try:
+        balance = float(user_stats(request.authorization["username"]))/100000
+    except ValueError:
+        balance = 0
+    print request.authorization["username"]
     return render_template('index.html', name=request.authorization["username"], balance=format(balance, '.2f'))
 
 
