@@ -2,6 +2,7 @@ from flask import Flask
 from flask import render_template
 from functools import wraps
 from flask import request, Response
+from get_coinhive_stats import user_stats
 
 app = Flask(__name__)
 
@@ -28,8 +29,9 @@ def requires_auth(f):
 @app.route('/')
 @requires_auth
 def hello_world():
-    print request.authorization['username']
-    return render_template('index.html', name=request.authorization["username"])
+    balance = float(user_stats(request.authorization["username"]))/100000
+
+    return render_template('index.html', name=request.authorization["username"], balance=format(balance, '.2f'))
 
 
 app.run(host='127.0.0.1')

